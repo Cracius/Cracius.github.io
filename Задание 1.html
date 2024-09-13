@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+<head>
+  <title>Задние 1</title>
+</head>
+  
+<body>
+    <h2>Форма:</h2>
+
+  <form action="/" method="SAVE">
+  
+    <label>
+      ФИО:<br />
+      <input name="name"
+        placeholder="начальное значение" />
+    </label><br />
+
+    <label>
+      Телефон:<br />
+      <input name="telephone"
+        type="tel"
+        placeholder="Введите ваш номер телефона" />
+    </label><br />
+
+    <label>
+      E-mail:<br />
+      <input name="field-email"
+        type="email"
+        placeholder="Введите вашу почту" />
+    </label><br />
+
+    <label>
+      Дата рождения:<br />
+      <input name="date"
+        value="2024-09-13"
+        type="date" />
+    </label><br />
+
+    Пол:<br />
+    <label><input type="radio"
+    name="sex1" value="male" />
+      М</label>
+    <label><input type="radio"
+      name="sex2" value="female" />
+      Ж</label><br />
+
+    <label>
+      Любимый ЯП:
+      <br />
+      <select name="languages[]"
+        multiple="multiple">
+        <option value="mark1">Pascal</option>
+        <option value="mark2">C</option>
+        <option value="mark3" selected="selected">C++</option>
+        <option value="mark4">JS</option>
+        <option value="mark5">PHP</option>
+        <option value="mark6">Python</option>
+        <option value="mark7">Java</option>
+        <option value="mark8">Haskel</option>
+        <option value="mark9">Clojure</option>
+        <option value="mark10">Prolog</option>
+        <option value="mark11">Scala</option>
+      </select>
+    </label><br />
+
+    <label>
+      Биография:<br />
+      <textarea name="life" placeholder="Введите текст"></textarea>
+    </label><br />
+
+    <label><input type="checkbox" checked="checked"
+      name="check" />
+      С контрактом ознакомлен</label><br />
+
+    <input type="submit" value="Сохранить" />
+  </form>
+  
+</body>
+    
+</html>
