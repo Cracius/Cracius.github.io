@@ -3,5 +3,119 @@
 <html lang="ru">
 
 <head>
-  <title>Index</title>
+  <title>Задние 1</title>
 </head>
+  
+<body>
+
+<h1>Маркированный список гиперссылок</h1>
+
+  <ul>
+    <li><a href="http://kubsu.ru">Абсолютная ссылка на главную страницу сайта kubsu.ru</a></li>
+    <li><a href="https://kubsu.ru">Абсолютная ссылка на главную страницу сайта kubsu.ru в https</a></li>
+    <li><a href="https://sun6-23.userapi.com/impg/6dl-etuZNhmA21jrrF4CmGwKMMTWiT38Ve0bcA/CgUMvgDAIw0.jpg?size=960x720&quality=96&sign=9ccc80a4079211e057b8953f5c6d0e99&c_uniq_tag=Ns649TqowlAAeOzKFihpfbaEWhuEgYbtgC1Z1N1EAXA&type=album"><img src="https://sun6-23.userapi.com/impg/6dl-etuZNhmA21jrrF4CmGwKMMTWiT38Ve0bcA/CgUMvgDAIw0.jpg?size=960x720&quality=96&sign=9ccc80a4079211e057b8953f5c6d0e99&c_uniq_tag=Ns649TqowlAAeOzKFihpfbaEWhuEgYbtgC1Z1N1EAXA&type=album" alt="Пестик" width = "500"></a></li>
+    <li><a href="/page1.html">Сокращенная ссылка на внутреннюю страницу</a></li>
+    <li><a href="/">сокращенную ссылку на главную страницу</a></li>
+    <li><a href="#link">Ссылка на фрагмент текущей страницы (биография)</a></li>
+    <li><a href="https://yandex.ru/search/page?parametr1=val1&parametr2=val2&parametr3=val3">Ссылка с тремя параметрами в URL</a></li>
+    <li><a href="https://yandex.ru/search/page?id=8">Ссылка с параметром id в URL</a></li>
+    <li><a href="test.html">Относительная ссылка на страницу в текущем каталоге</a></li>
+    <li><a href="about/test 2.html">Относительная ссылка на страницу в каталоге about</a></li>
+    <li><a href="../Из слоя 1.html">Относительная ссылка на страницу на уровень выше</a></li>
+    <li><a href="../../На 2 слоя выше.html">Относительная ссылка на страницу двумя уровнями выше</a></li>
+    <li><p>Контекстная <a href="https://ru.wikipedia.org/wiki/%D0%A1%D1%81%D1%8B%D0%BB%D0%BA%D0%B0_(%D0%BD%D0%B0%D0%BA%D0%B0%D0%B7%D0%B0%D0%BD%D0%B8%D0%B5)#Специфика_ссылки_как_вида_наказания_в_СССР">ссылка</a> в тексте абзаца</p></li>
+    <li><a href="https://ru.wikipedia.org/wiki/%D0%A0%D0%B5%D0%B7%D0%B5%D1%86_%D0%BD%D0%B5%D0%B1%D0%B5%D1%81%D0%BD%D1%8B%D0%B9#В_контексте_«новой_волны»">Ссылка на фрагмент страницы стороннего сайта</a></li>
+    <li>
+        <img src="https://thumbs.dreamstime.com/b/house-sun-background-green-grass-blue-sky-29619508.jpg" usemap="#refs" alt="Домик, солнце, день чудесный" width = "500">
+        <map name="refs">
+            <area shape="rect" coords="200,200,1000,1500" href="https://github.com/Cracius/Cracius.github.io" alt="Прямоугольная ссылка">
+	    <area shape="circle" coords="75, 75, 50" href="https://github.com/Cracius/Cracius.github.io" alt="Круглая ссылка">
+        </map>
+    </li>
+    <li><a href="">Ссылка с пустым href</a></li>
+    <li><a>Ссылка без href</a></li>
+    <li><a href="" rel="nofollow">Ссылка, по которой запрещен переход поисковикам</a></li>
+    <li><a href="" rel="noindex">Ссылка, запрещенная для индексации поисковиками</a></li>
+    <li>
+        <ol>
+          <li><a href="" title="title1">title</a></li>
+          <li><a href="" title="title2">title</a></li>
+          <li><a href="" title="title3">title</a></li>
+        </ol>
+    </li>
+    <li><a href=ftp://имя:пароль@адрес/">FTP Ссылка</a></li>
+  </ul>
+
+<h1>Форма:</h1>
+
+  <form action="/" method="SAVE">
+  
+    <label>
+      ФИО:<br />
+      <input name="name"
+        placeholder="начальное значение" />
+    </label><br />
+
+    <label>
+      Телефон:<br />
+      <input name="telephone"
+        type="tel"
+        placeholder="Введите ваш номер телефона" />
+    </label><br />
+
+    <label>
+      E-mail:<br />
+      <input name="field-email"
+        type="email"
+        placeholder="Введите вашу почту" />
+    </label><br />
+
+    <label>
+      Дата рождения:<br />
+      <input name="date"
+        value="2024-09-13"
+        type="date" />
+    </label><br />
+
+    Пол:<br />
+    <label><input type="radio" checked="checked"
+      name="sex" value="male" />
+      М</label>
+    <label><input type="radio"
+      name="sex" value="female" />
+      Ж</label><br />
+
+    <label>
+      Любимый ЯП:
+      <br />
+      <select name="languages[]"
+        multiple="multiple">
+        <option value="mark1">Pascal</option>
+        <option value="mark2">C</option>
+        <option value="mark3" selected="selected">C++</option>
+        <option value="mark4">JS</option>
+        <option value="mark5">PHP</option>
+        <option value="mark6">Python</option>
+        <option value="mark7">Java</option>
+        <option value="mark8">Haskel</option>
+        <option value="mark9">Clojure</option>
+        <option value="mark10">Prolog</option>
+        <option value="mark11">Scala</option>
+      </select>
+    </label><br />
+
+    <label id = "link">
+      Биография:<br />
+      <textarea name="life" placeholder="Введите текст"></textarea>
+    </label><br />
+
+    <label><input type="checkbox" checked="checked"
+      name="check" />
+      С контрактом ознакомлен</label><br />
+
+    <input type="submit" value="Сохранить" />
+  </form>
+  
+</body>
+    
+</html>
