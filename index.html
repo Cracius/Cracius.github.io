@@ -51,36 +51,36 @@
   
     <label>
       ФИО:<br />
-      <input name="name"
+      <input name="name" required
         placeholder="начальное значение" />
     </label><br />
 
     <label>
       Телефон:<br />
-      <input name="telephone"
+      <input name="telephone" required
         type="tel"
         placeholder="Введите ваш номер телефона" />
     </label><br />
 
     <label>
       E-mail:<br />
-      <input name="field-email"
+      <input name="field-email" required
         type="email"
         placeholder="Введите вашу почту" />
     </label><br />
 
     <label>
       Дата рождения:<br />
-      <input name="date"
+      <input name="date" required
         value="2024-09-13"
         type="date" />
     </label><br />
 
     Пол:<br />
-    <label><input type="radio" checked="checked"
+    <label><input type="radio" checked="checked" required
       name="sex" value="male" />
       М</label>
-    <label><input type="radio"
+    <label><input type="radio" required
       name="sex" value="female" />
       Ж</label><br />
 
@@ -88,7 +88,7 @@
       Любимый ЯП:
       <br />
       <select name="languages[]"
-        multiple="multiple">
+        multiple="multiple" required>
         <option value="mark1">Pascal</option>
         <option value="mark2">C</option>
         <option value="mark3" selected="selected">C++</option>
@@ -105,10 +105,10 @@
 
     <label id = "link">
       Биография:<br />
-      <textarea name="life" placeholder="Введите текст"></textarea>
+      <textarea name="life" placeholder="Введите текст" required></textarea>
     </label><br />
 
-    <label><input type="checkbox" checked="checked"
+    <label><input type="checkbox" checked="checked" required
       name="check" />
       С контрактом ознакомлен</label><br />
 
