@@ -37,11 +37,15 @@ header
     background-color: #FF4500;
     border: solid;
     border-color: white;
+
+    /*Не 100% ширина, чтобы были видны границы блока*/
+
     max-width: 99.7vw;
     min-width: 99.7vw;
 }
 
-.logoblock{
+.logoblock
+{
     display: flex;
     margin: 10px;
     order: 1;
@@ -50,18 +54,21 @@ header
     border-radius:50%;
 }
 
-.navmobile{
+.navmobile
+{
     display: flex;
     flex-direction: column;
     order: 1;
     align-items: center;
 }
 
-.navdesk{
+.navdesk
+{
     display: none;
 }
 
-.logotext{
+.logotext
+{
     display: flex;
     flex-direction: row;
     flex:1;
@@ -73,22 +80,26 @@ header
     text-decoration: none;
 }
 
-.navrefer{
+.navrefer
+{
     text-decoration: none;
     font-size: 46px;
     color:#FFFFF0;
 }
 
-.referblock {
+.referblock 
+{
     order:4;
 }
 
-.tableblock {
+.tableblock
+{
     flex: none;
     order:3;
 }
 
-.midheader{
+.midheader
+{
     color: #FFFFF0;
     font-size: 3em;
 }
@@ -150,8 +161,7 @@ th
     background-color: #1d3a63;
 }
 
-label
-{
+label{
     margin-left: auto;
     margin-right: auto;
     width: 100px;
@@ -160,12 +170,9 @@ label
 
 form
 {
-    width: 1080px;
-    background-color: #FF4500;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 50px;
+    order: 5;
     border: solid;
+    background-color: #FF4500;
     border-color: white;
 }
   
@@ -174,17 +181,12 @@ form > *
     display: block;
     margin-top: 10px;
     margin-bottom: 25px;
-    margin-left: auto;
     width: 200px;
-    margin-right: auto;
     font-size: 20px;
 }
 
 .radio
 {
-    margin-left: auto;
-    margin-right: auto;
-    width: 100px;
     color: #FFFFF0;
 }
 
