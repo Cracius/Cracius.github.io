@@ -37,9 +37,6 @@ header
     background-color: #FF4500;
     border: solid;
     border-color: white;
-
-    /*Не 100% ширина, чтобы были видны границы блока*/
-
     max-width: 99.7vw;
     min-width: 99.7vw;
 }
@@ -52,6 +49,8 @@ header
     flex-direction: row;
     flex-shrink: 1;
     border-radius:50%;
+    width: 100px;
+    height: 100px;
 }
 
 .navmobile
@@ -256,8 +255,8 @@ footer
         flex-direction: row;
         flex: none;
         border-radius:50%;
-        width: 130px;
-        height: 130px;
+        width: 100px;
+        height: 100px;
         align-self:center;
     }
     
