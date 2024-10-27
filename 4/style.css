@@ -50,7 +50,7 @@ header
 
 .logotext
 {
-    font-size: 2rem;
+    font-size: 3rem;
     color:#FFFFF0;
     text-decoration: none;
 }
@@ -59,7 +59,7 @@ header
 {
     text-decoration: none;
     font-size: 1.5rem;
-    color:#aed7fd;
+    color:#FFFFF0;
     margin-left: auto;
     margin-right: auto;
 }
@@ -112,7 +112,7 @@ tr
 
 th
 {
-    color: #aed7fd;
+    color: #FFFFF0;
     border: solid;
     border-width: 1px;
     border-color: #77b5e7;
