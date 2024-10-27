@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Калькулятор стоимости заказа и услуги</title>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>Калькулятор стоимости заказа</h1>
+    
+    <label for="quantity">Количество товара:</label>
+    <input type="number" id="quantity" min="1" value="1">
+    
+    <label for="product">Выберите товар:</label>
+    <select id="product">
+        <option value="100">Товар A: 100₽</option>
+        <option value="200">Товар B: 200₽</option>
+        <option value="300">Товар C: 300₽</option>
+    </select>
+    
+    <button id="calculateBtn">Рассчитать стоимость</button>
+    <p id="result"></p>
+
+    <h1>Калькулятор стоимости услуги</h1>
+    
+    <label>Количество услуги:</label>
+    <input type="number" id="serviceQuantity" min="1" value="1">
+
+    <label>Выберите тип услуги:</label>
+    <div>
+        <input type="radio" name="serviceType" id="serviceType1" value="type1"> Тип A<br>
+        <input type="radio" name="serviceType" id="serviceType2" value="type2"> Тип B<br>
+        <input type="radio" name="serviceType" id="serviceType3" value="type3"> Тип C
+    </div>
+
+    <div id="serviceOptions" style="display: none;">
+        <label for="serviceOption">Выберите опцию:</label>
+        <select id="serviceOption">
+            <option value="50">Опция A - 50₽</option>
+            <option value="100">Опция B - 100₽</option>
+        </select>
+    </div>
+
+    <div id="serviceProperty" style="display: none;">
+        <label>
+            <input type="checkbox" id="additionalProperty"> Дополнительная помощь +200₽
+        </label>
+    </div>
+
+    <button id="calculateServiceBtn">Вычислить стоимость услуги</button>
+    <p id="serviceResult"></p>
+</body>
+</html>
