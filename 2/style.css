@@ -13,7 +13,7 @@
 header
 {
     width:100%; 
-    background-color:#A0522D; 
+    background-color:#D2691E; 
     height:120px;
     border-bottom: solid;
     border-bottom-color: white;
@@ -177,7 +177,7 @@ footer
     position: static;
     bottom: 0px;
     width:100%; 
-    background-color:#A0522D; 
+    background-color:#D2691E; 
     height:60px;
     margin-top: 50px;
     border-top: solid;
