@@ -3,20 +3,26 @@
 <html lang="ru">
   <head>
     <link rel="stylesheet" href="style.css">
-    <title> Практическое задание №3 </title>
+    <title> Задание 3 </title>
   </head>
   
 <body class="body">
   <header>
       <img class="logoblock" src="logo.jpg" alt="Задания">
-      <nav>
+      <h1 class="logotext">Задание 3</h1>
+      <nav class="navdesk">
         <a class="navrefer" href="#tab"> Таблица </a>
         <a class="navrefer" href="#forma"> Форма </a>
-        <a class="navrefer" href="https://steamuserimages-a.akamaihd.net/ugc/918047284277421363/4668BA6C6879C1D260F265E2AA04E3E9E08FE109/?imw=512&imh=512&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true"> Победа </a>
+        <a class="navrefer" href="#refer"> Ссылки </a>
       </nav>
-      <h1 class="logotext">Задание 3</h1>
   </header>
 <div class="midblock">
+  <nav class="navmobile">
+    <a class="navrefer" href="#tab"> Таблица </a>
+    <a class="navrefer" href="#forma"> Форма </a>
+    <a class="navrefer" href="#refer"> Ссылки </a>
+  </nav>
+  <div id="refer" class="referblock">
   <h1 class="midheader">Маркированный список гиперссылок</h1>
   <ul>
     <li><a href="http://kubsu.ru">Абсолютная ссылка на главную страницу сайта kubsu.ru</a></li>
@@ -51,7 +57,7 @@
   </ul>
 </div>
 
-<div id="tab" class="midblock">
+<div id="tab" class="tableblock">
     <h1 class="midheader"> Таблица </h1>
     <table>
       <tr class="nctr">
@@ -183,6 +189,7 @@
 
     <input type="submit" value="Сохранить" />
   </form>
+</div>
   <footer>
     <a href="https://github.com/Cracius" class="logotext" style="margin: 50px;">(c) Cracius</a>
   </footer>
