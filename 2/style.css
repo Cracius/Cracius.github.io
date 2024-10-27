@@ -6,7 +6,7 @@
     linear-gradient(335deg, #b00 23px, transparent 23px),
     linear-gradient(155deg, #d00 23px, transparent 23px);
     background-size: 58px 58px;
-    background-position: 0px 2px, 4px 35px, 29px 31px, 34px 6px;
+    background-position:0px 0px, 0px 0px, -1px -1px, -1px -1px;
 }
 
 header
@@ -45,7 +45,7 @@ nav
 {
     margin-top: auto;
     font-size: 40px;
-    color:#8fafcc;
+    color:#FFFFF0;
     text-decoration: none;
 }
 
@@ -54,7 +54,7 @@ nav
     margin: 60px;
     text-decoration: none;
     font-size: 46px;
-    color:#aed7fd;
+    color:#FFFFF0;
 }
 
 .midblock
@@ -70,7 +70,7 @@ nav
 
 .midheader
 {
-    color: #aed7fd;
+    color: #FFFFF0;
     margin-left: auto; 
     margin-right: auto; 
     width: 100px;
@@ -83,7 +83,7 @@ p
 
 ol
 {
-    color:#aed7fd;
+    color:#FFFFF0;
 }
 
 ul
@@ -94,7 +94,7 @@ ul
 a
 {
     transition-duration: 0.25ms;
-    color:#aed7fd;
+    color:#FFFFF0;
 }
 
 a:hover
@@ -138,7 +138,7 @@ label
     margin-left: auto;
     margin-right: auto;
     width: 100px;
-    color: #aed7fd;
+    color: #FFFFF0;
 }
 
 form
@@ -168,7 +168,7 @@ form > *
     margin-left: auto;
     margin-right: auto;
     width: 100px;
-    color: #aed7fd;
+    color: #FFFFF0;
 }
 
 footer
