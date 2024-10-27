@@ -10,12 +10,12 @@ window.addEventListener("DOMContentLoaded", function ()
         let inp = amount.value;
         if (inp.match(/^\d+$/) !== null)
         {
-            let res = Things[product.value] * inp;
-            resultfield.innerText = res;
+            let ava = Things[product.value] * inp;
+            resultfield.innerText = ava;
         }
         else
         {
-            resultfield.innerText = "Некорректный ввод количества";
+            resultfield.innerText = "Некорректный ввод";
         }
     });
 });
