@@ -12,7 +12,7 @@
 header
 {
     width:100%; 
-    background-color:#062249; 
+    background-color:#A0522D; 
     height:120px;
     border-bottom: solid;
     border-bottom-color: white;
@@ -32,7 +32,7 @@ nav
     width:50%;
     max-width: 960px;
     height:60px; 
-    background-color:#264d8f; 
+    background-color:#FF4500; 
     margin-left:auto; 
     margin-top:0px;
     border-bottom: solid;
@@ -60,7 +60,7 @@ nav
 .midblock
 {
     width: 1080px;
-    background-color: #264d8f;
+    background-color: #FF4500;
     margin-right: auto;
     margin-left: auto;
     margin-top: 50px;
@@ -144,7 +144,7 @@ label
 form
 {
     width: 1080px;
-    background-color: #264d8f;
+    background-color: #FF4500;
     margin-right: auto;
     margin-left: auto;
     margin-top: 50px;
@@ -176,7 +176,7 @@ footer
     position: static;
     bottom: 0px;
     width:100%; 
-    background-color:#062249; 
+    background-color:#A0522D; 
     height:60px;
     margin-top: 50px;
     border-top: solid;
