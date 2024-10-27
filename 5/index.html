@@ -1,13 +1,27 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="ru">
+    <head>
+        <title> Практическое задание №5 </title>
+        <script defer src="script.js"></script>
+    </head>
 
-  <head>
-    <title>Oyyyyy</title>
-  </head>
-
-  <body>
-    <h1>Ну нет :(</h1>
-  </body>
-
+    <body style="display: flex; flex-direction: column;">
+        <h1 style="margin-left: auto; margin-right: auto;"> Задание 5 </h1>
+        <div style="margin-left: auto; margin-right: auto; width: 40%; background-color: #F0E68C; border: solid; border-color: #BDB76B;">
+            <select id="Things" style="display: flex; margin-left: auto; margin-right: auto; background-color: #FAFAD2; margin-top: 10px;">
+                <option value="pr1">Краснодар - Сочи</option>
+                <option value="pr2">Москва - Питер</option>
+                <option value="pr3">Магадан - Нижний Новгород</option>
+                <option value="pr4">Астана - Грозный</option>
+                <option value="pr5">Норильск - Есентуки</option>
+            </select>
+            <input id="amount" placeholder="Количество" style="display: flex; margin-left: auto; margin-right: auto; background-color: #FAFAD2; margin-top: 10px;">
+            <button id="calculate" style="display: flex; order: 2; margin-left: auto; margin-top: 20px; margin-right: auto; background-color:#FAFAD2;"> Высчитать </button>
+            <div style="display: flex; flex-direction: column;">
+                <h4 style="margin-left: auto; margin-right: auto;"> Итого: </h4>
+                <div id="result" style="margin-left: auto; margin-right: auto;"></div>
+            </div>
+        </div>
+    </body>
 </html>
