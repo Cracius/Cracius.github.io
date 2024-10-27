@@ -78,7 +78,7 @@ nav
 
 p
 {
-    color: #e0effd;
+    color: #FFFFF0;
 }
 
 ol
@@ -88,7 +88,7 @@ ol
 
 ul
 {
-    color:#aed7fd;
+    color:#FFFFF0;
 }
 
 a
@@ -99,7 +99,7 @@ a
 
 a:hover
 {
-    color:#dbecfc;
+    color:#FFFFF0;
 }
 
 table
@@ -117,12 +117,12 @@ table
 
 tr
 {
-    background-color: #021f47;
+    background-color: #FFFFF0;
 }
 
 th
 {
-    color: #aed7fd;
+    color: #FFFFF0;
     border: solid;
     border-width: 1px;
     border-color: #77b5e7;
