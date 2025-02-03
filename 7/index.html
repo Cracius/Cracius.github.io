@@ -1,12 +1,202 @@
 <!DOCTYPE html>
-
 <html lang="ru">
-
 <head>
-  <title>!THERE IS NO ESCAPE!</title>
-</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Горизонтальная галерея</title>
+<style>
+  body {
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    background: #eee;
+  }
 
+  .container {
+    max-width: 800px;
+    margin: 40px auto;
+    overflow: hidden;
+    position: relative;
+    background: #fff;
+    padding: 20px 60px; /* Дополнительные отступы для кнопок */
+    border-radius: 4px;
+  }
+
+  .slider-wrapper {
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .slider-track {
+    display: flex;
+    transition: transform 0.3s ease;
+  }
+
+  .slide {
+    flex: 0 0 auto;
+    text-align: center;
+  }
+
+  /* Адаптивность: на больших экранах показываем 3 изображения, на смартфонах 1 */
+  @media (min-width: 600px) {
+    .slide {
+      width: calc((100% / 3) - 10px);
+      margin: 0 5px;
+    }
+  }
+
+  @media (max-width: 599px) {
+    .slide {
+      width: 100%;
+      margin: 0;
+    }
+  }
+
+  .slide img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+  }
+
+  .arrow-btn {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    pointer-events: auto;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .prev-btn {
+    left: 10px;
+  }
+
+  .next-btn {
+    right: 10px;
+  }
+
+  .pager {
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    border-radius: 50%;
+    background: #ccc;
+    cursor: pointer;
+  }
+
+  .dot.active {
+    background: #333;
+  }
+
+  footer {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 0.9em;
+    color: #555;
+  }
+</style>
+<script defer>
+document.addEventListener('DOMContentLoaded', function() {
+  const track = document.querySelector('.slider-track');
+  const slides = Array.from(document.querySelectorAll('.slide'));
+  const prevBtn = document.querySelector('.prev-btn');
+  const nextBtn = document.querySelector('.next-btn');
+  const pager = document.querySelector('.pager');
+
+  let currentPage = 0;
+  let slidesPerPage = 3; // default for wider screens
+  let totalPages = 0;
+
+  function updateLayout() {
+    const width = window.innerWidth;
+    slidesPerPage = width < 600 ? 1 : 3;
+    totalPages = Math.ceil(slides.length / slidesPerPage);
+
+    if (currentPage >= totalPages) {
+      currentPage = totalPages - 1;
+    }
+
+    updateTrackPosition();
+    updatePager();
+  }
+
+  function updateTrackPosition() {
+    const slideWidth = slides[0].getBoundingClientRect().width;
+    const offset = -currentPage * slideWidth * slidesPerPage;
+    track.style.transform = 'translateX(' + offset + 'px)';
+  }
+
+  function updatePager() {
+    pager.innerHTML = '';
+    for (let i = 0; i < totalPages; i++) {
+      const dot = document.createElement('span');
+      dot.className = 'dot' + (i === currentPage ? ' active' : '');
+      dot.addEventListener('click', function() {
+        currentPage = i;
+        updateTrackPosition();
+        updatePager();
+      });
+      pager.appendChild(dot);
+    }
+  }
+
+  prevBtn.addEventListener('click', function() {
+    if (currentPage > 0) {
+      currentPage--;
+      updateTrackPosition();
+      updatePager();
+    }
+  });
+
+  nextBtn.addEventListener('click', function() {
+    if (currentPage < totalPages - 1) {
+      currentPage++;
+      updateTrackPosition();
+      updatePager();
+    }
+  });
+
+  window.addEventListener('resize', function() {
+    updateLayout();
+  });
+
+  updateLayout();
+});
+</script>
+</head>
 <body>
-  <h1>Nothing there<br />
-  <a href="/">Обратно</a></h1>
+
+<div class="container">
+  <div class="slider-wrapper">
+    <div class="slider-track">
+      <div class="slide"><img src="https://assets.podomatic.net/ts/ec/b4/80/tzejohnliu2043/200x200_14390159.jpg" alt="Изображение 1"></div>
+      <div class="slide"><img src="https://womanadvice.ru/sites/default/files/imagecache/height_200/49/2020-02-27_2237/mainimage300x300/gory_guylin.jpg" alt="Изображение 2"></div>
+      <div class="slide"><img src="https://sun1-15.userapi.com/s/v1/if1/UHd-zMQL_KrTrdE7Cwb4wIK_gu3whKAbuy-NkF0vfZznMBoEkn04BL0-iug2JBXjYMkIltzv.jpg?size=200x200&quality=96&crop=9,5,759,759&ava=1" alt="Изображение 3"></div>
+      <div class="slide"><img src="https://sun9-86.userapi.com/s/v1/ig2/4jYzczh8_UKCxr3Vvswroqn8c3GR4quv6r5M8nyTWT9kpZvo2nIv4UoRXWsaK_3vkftDrbd-jUTZBe1DR3TGfgwk.jpg?size=200x200&quality=96&crop=2,51,472,472&ava=1" alt="Изображение 4"></div>
+      <div class="slide"><img src="https://sun1-24.userapi.com/s/v1/if2/DMb759HiJ89JOJj2azqUa-dqF5hmf5HByVfxpcCnYsdlcAwF9Bl_Dd9dCz6OHnCJ0npVyXzooPy4Qu9A_Afu9jwr.jpg?size=200x200&quality=96&crop=113,37,300,300&ava=1" alt="Изображение 5"></div>
+      <div class="slide"><img src="https://sun9-17.userapi.com/s/v1/if1/BGhUAeROYt5HZ8qwlx3fDo1zwzt8y4Y7DpC9OcI0FTO7PQqxeqLZpE5anJF68a2kkHkyAZ-S.jpg?size=200x200&quality=96&crop=19,0,206,206&ava=1" alt="Изображение 6"></div>
+      <div class="slide"><img src="https://sun3-10.userapi.com/impf/c308117/v308117871/43d0/gaqdBuApL98.jpg?size=200x0&quality=88&crop=70,70,401,401&sign=0ab3b514c1f88204ae24b80dfb15f2b4&c_uniq_tag=Fo59jconvjE70Dtgib4-rZZqd8jC0VM8O__2_wfBmU8" alt="Изображение 7"></div>
+      <div class="slide"><img src="https://play-lh.googleusercontent.com/K1lZdlAJ88_GtJUt5w9WuvKwxyCJMOO8ahA4sQo8bLT30SVdR4_ieQO0ViGw98aHsnau=s200" alt="Изображение 8"></div>
+    </div>
+  </div>
+
+  <button class="arrow-btn prev-btn">←</button>
+  <button class="arrow-btn next-btn">→</button>
+
+  <div class="pager"></div>
+</div>
+
+<footer>By Cracur ©</footer>
+
 </body>
+</html>
