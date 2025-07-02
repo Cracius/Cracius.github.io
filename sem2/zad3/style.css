@@ -1,0 +1,21 @@
+.body {
+    background-color: #FFCC00;
+}
+
+#footerstyle {
+    background-color: #CC9900;
+}
+
+.footerstyle {
+    background-color: #CC9900;
+}
+
+@media screen and (min-width: 768px) {
+    .body {
+        background-color: #FFCC00;
+    }
+
+    .footerstyle {
+        background-color: #CC9900;
+    }
+}
